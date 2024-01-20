@@ -20,7 +20,12 @@ int main()
     // ofstream -> Output File Stream
     //outfile -> An object of class ofstream
     //File.txt -> Name of file sent as constructor of ofstream object
-    ofstream outfile("File.txt");
+    //Creating file (method 1)
+    // ofstream outfile("File.txt");
+    // Creating file (method 2)
+    ofstream outfile;
+    outfile.open("File.txt");
+
 
     //Writing data to file
     // 'outfile<<' is used to write the data to the file
@@ -29,6 +34,8 @@ int main()
     //Closing the file
     //Closing the file after all operations are done
     outfile.close();
+
+    cout<<"Data has been written to the file\n";
 
     system("pause");
     return 0;
